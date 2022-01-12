@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PastaAPI/PastaAPI.iml" filepath="$PROJECT_DIR$/PastaAPI/PastaAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PastaFrontend/PastaFrontend.iml" filepath="$PROJECT_DIR$/PastaFrontend/PastaFrontend.iml" />
+    </modules>
+  </component>
+</project>
