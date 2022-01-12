@@ -1,4 +1,4 @@
-package pj.pjatk.pastaapi;
+package pl.pjatk.pastaapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +15,6 @@ public class PastaApiApplication {
 
     @GetMapping
     public String hello() {
-        return "hello";
+        return "Hello";
     }
 }
