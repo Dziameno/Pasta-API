@@ -1,6 +1,8 @@
 package pl.pjatk.pastaapi.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import pl.pjatk.pastaapi.exception.DishNotFoundException;
 import pl.pjatk.pastaapi.model.Dish;
@@ -18,14 +20,14 @@ public class DishService {
         this.dishRespository = dishRespository;
     }
 
-    public Dish getDishFromRepo(long id) {
+    public ResponseEntity<Dish> getDishFromRepo(long id) {
         Dish dish = dishRespository.findById(id);
 
         if(dish == null) {
             throw new DishNotFoundException();
         }
 
-        return dish;
+        return new ResponseEntity<>(dish, HttpStatus.OK);
     }
 
     public List<Dish> getDishesFromRepo() {
