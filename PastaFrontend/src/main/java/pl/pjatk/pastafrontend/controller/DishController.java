@@ -24,8 +24,8 @@ public class DishController {
                 .bodyToMono(Dish[].class)
                 .block();
 
-//        List<Dish> dishesList = Arrays.asList(dishes);
-        model.addAttribute("dishes", dishes[0]);
+        List<Dish> dishesList = Arrays.asList(dishes);
+        model.addAttribute("dishes", dishesList);
 
         return "dishes";
     }
@@ -39,8 +39,8 @@ public class DishController {
 //                .bodyToMono(Dish[].class)
 //                .block();
 //
-//        List<Dish> dishList = Arrays.asList(dish);
-//        model.addAttribute("dish", dishList);
+////        List<Dish> dishList = Arrays.asList(dish);
+//        model.addAttribute("dish", dish[0]);
 //
 //        return "dish";
 //    }

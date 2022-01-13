@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dishes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/style.css}"/>
 </head>
 <body>
 
 <!--<header th:insert="fragments.html"> </header>-->
-<table>
+<table class="navbar navbar-dark bg-dark">
+    <tr class="table-dark">
+        <td><button class="button"><a href="/" >mainSite</a></button></td>
+        <td><button class="button"><a href="/dishes" >allPastas</a></button></td>
+        <td><button class="button"><a href="/" >vegePastas</a></button></td>
+        <td><button class="button"><a href="/" >noodleTypes</a></button></td>
+    </tr>
+</table>
+<table class="table table-striped">
     <tbody>
-    <tr th:each="dish: ${dishes}">
+    <tr class="table-dark">
+        <td>pastaName</td>
+        <td>pastaRating</td>
+        <td>preparationTime</td>
+    </tr>
+    <tr class="table table-striped" th:each="dish: ${dishes}">
         <td th:text="${dish.name}"></td>
         <td th:text="${dish.rating}"></td>
         <td th:text="${dish.time}"></td>
