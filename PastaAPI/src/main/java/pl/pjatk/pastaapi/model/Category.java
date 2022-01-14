@@ -8,16 +8,16 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idCategory")
-    private int idCategory;
+    private Long idCategory;
     @Basic
     @Column(name = "name")
     private String name;
 
-    public int getIdCategory() {
+    public Long getIdCategory() {
         return idCategory;
     }
 
-    public void setIdCategory(int idCategory) {
+    public void setIdCategory(Long idCategory) {
         this.idCategory = idCategory;
     }
 

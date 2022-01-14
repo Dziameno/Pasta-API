@@ -9,19 +9,19 @@ public class Ingredients {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "idIngredient")
-    private int idIngredient;
+    private Long idIngredient;
     @Basic
     @Column(name = "name")
     private String name;
     @Basic
     @Column(name = "idCategory")
-    private int idCategory;
+    private Long idCategory;
 
-    public int getIdIngredient() {
+    public Long getIdIngredient() {
         return idIngredient;
     }
 
-    public void setIdIngredient(int idIngredient) {
+    public void setIdIngredient(Long idIngredient) {
         this.idIngredient = idIngredient;
     }
 
@@ -33,11 +33,11 @@ public class Ingredients {
         this.name = name;
     }
 
-    public int getIdCategory() {
+    public Long getIdCategory() {
         return idCategory;
     }
 
-    public void setIdCategory(int idCategory) {
+    public void setIdCategory(Long idCategory) {
         this.idCategory = idCategory;
     }
 

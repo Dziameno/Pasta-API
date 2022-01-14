@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import pl.pjatk.pastaapi.model.Dish;
+import pl.pjatk.pastaapi.projection.DishProjection;
 import pl.pjatk.pastaapi.service.DishService;
 
 import java.util.List;
-
 
 @RestController
 public class DishController {
@@ -26,7 +26,7 @@ public class DishController {
     }
 
     @GetMapping("/dish/{id}")
-    public ResponseEntity<Dish> getDish(@PathVariable long id) {
+    public ResponseEntity<List<DishProjection>> getDish(@PathVariable long id) {
         return dishService.getDishFromRepo(id);
     }
 }

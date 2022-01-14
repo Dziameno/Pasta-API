@@ -23,6 +23,7 @@ public class Dish {
     @Column(name = "preparation")
     private String preparation;
 
+
     public long getId() {
         return id;
     }

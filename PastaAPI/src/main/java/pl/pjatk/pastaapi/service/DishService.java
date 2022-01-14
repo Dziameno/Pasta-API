@@ -6,10 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import pl.pjatk.pastaapi.exception.DishNotFoundException;
 import pl.pjatk.pastaapi.model.Dish;
+import pl.pjatk.pastaapi.projection.DishProjection;
 import pl.pjatk.pastaapi.repository.DishRespository;
 
 import java.util.List;
-
 
 @Component
 public class DishService {
@@ -20,9 +20,8 @@ public class DishService {
         this.dishRespository = dishRespository;
     }
 
-    public ResponseEntity<Dish> getDishFromRepo(long id) {
-        Dish dish = dishRespository.findById(id);
-
+    public ResponseEntity<List<DishProjection>> getDishFromRepo(long id) {
+        List<DishProjection> dish = dishRespository.findById(id);
         if(dish == null) {
             throw new DishNotFoundException();
         }

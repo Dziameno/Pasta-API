@@ -17,21 +17,22 @@
         <td><button class="button"><a href="/" >vegePastas</a></button></td>
         <td><button class="button"><a href="/" >noodleTypes</a></button></td>
     </tr>
+
 </table>
-<table class="table table-striped table-dark">
+    <h1 th:text="${dish[0].name}"></h1>
+<table class="table table-striped">
     <tbody>
-    <tr>
-        <td>pastaName</td>
-        <td>pastaRating</td>
-        <td>preparationTime</td>
+    <tr class="table-dark">
+        <td>Ingredients</td>
+        <td>Amount</td>
     </tr>
-    <tr class="table table-striped" th:each="dish: ${dishes}">
-        <td><button class="button">
-            <a th:href="@{'/dish/' + ${dish.id}}"><span th:text="${dish.name}"></span></a></button></td>
-        <td th:text="${dish.rating}"></td>
-        <td th:text="${dish.time}"></td>
+    <tr class="table table-striped" th:each="dish: ${dish}">
+        <td th:text="${dish.iname}"></td>
+        <td th:text="${dish.amount}"></td>
     </tr>
     </tbody>
 </table>
+<h4 th:text="${dish[0].preparation}"></h4>
+
 </body>
 </html>
