@@ -45,4 +45,34 @@ public class DishController {
 
         return "dish";
     }
+
+    @GetMapping("/vege")
+    public String showAllVegeDishes(Model model) {
+        Dish[] dishes = webClient
+                .get()
+                .uri("/vege")
+                .retrieve()
+                .bodyToMono(Dish[].class)
+                .block();
+
+        List<Dish> vegeDishesList = Arrays.asList(dishes);
+        model.addAttribute("dishes", vegeDishesList);
+
+        return "vege";
+    }
+
+    @GetMapping("/noodles")
+    public String showAllNoodlesTypes(Model model) {
+        DishData[] dishes = webClient
+                .get()
+                .uri("/noodles")
+                .retrieve()
+                .bodyToMono(DishData[].class)
+                .block();
+
+        List<DishData> noodlesList = Arrays.asList(dishes);
+        model.addAttribute("dishes", noodlesList);
+
+        return "noodles";
+    }
 }

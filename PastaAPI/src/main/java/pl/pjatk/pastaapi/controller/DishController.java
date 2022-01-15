@@ -29,4 +29,16 @@ public class DishController {
     public ResponseEntity<List<DishProjection>> getDish(@PathVariable long id) {
         return dishService.getDishFromRepo(id);
     }
+
+    @GetMapping("/vege")
+    public List<Dish> vegeDishes() {
+        return  dishService.getDishesWithoutCategoryRepo(2);
+    }
+
+    @GetMapping("/noodles")
+    public List<DishProjection> noodles() {
+        return  dishService.getDishesWithCategoryRepo(1);
+    }
+
+
 }

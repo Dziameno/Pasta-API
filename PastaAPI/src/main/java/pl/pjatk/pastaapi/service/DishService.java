@@ -35,4 +35,15 @@ public class DishService {
         return dishes;
     }
 
+    public List<Dish> getDishesWithoutCategoryRepo(long categoryId) {
+        List<Dish> dishes = dishRespository.findWithoutCategory(categoryId);
+
+        return dishes;
+    }
+
+    public List<DishProjection> getDishesWithCategoryRepo(long categoryId) {
+        List<DishProjection> dishes = dishRespository.findWithCategory(categoryId);
+
+        return dishes;
+    }
 }

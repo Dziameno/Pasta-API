@@ -5,7 +5,17 @@ public class DishData {
     private String name;
     private String iname;
     private String amount;
+    private String time;
+    private String rating;
     private String preparation;
+
+    public String getRating() {
+        return rating;
+    }
+
+    public String getTime() {
+        return time;
+    }
 
     public long getId() {
         return id;
