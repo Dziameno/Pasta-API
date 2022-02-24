@@ -4,10 +4,10 @@
 
 ## allPastas list with rating and preparation time
 <p align="center">
-<img src="./pics/pasta1.PNG" width="800" height="200"/>
+<img src="./pics/pasta1.PNG" width="800" height="300"/>
 </p>
 
 ## noodleTypes list sorted with types of noodles in specific pasta
 <p align="center">
-<img src="./pics/pasta2.PNG" width="800" height="200"/>
+<img src="./pics/pasta2.PNG" width="800" height="300"/>
 </p>
