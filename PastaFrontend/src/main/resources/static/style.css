@@ -68,9 +68,8 @@ body {
 .dropdown-content a:hover {
     color: gray;}
 
-.navbar-dark {
-    position: relative;
-    min-height: 50px;
+.navbar {
+    position: center;
     margin-bottom: 0px;
     border: 1px solid transparent;
     text-align: center
